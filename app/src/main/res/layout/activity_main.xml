@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:id="@+id/start_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+            <EditText
+                android:id="@+id/etStartText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/black"
+                android:focusableInTouchMode="true"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_12sdp"
+                android:hint="Starting Address"
+                android:drawableStart="@drawable/ic_baseline_my_location_24"
+                android:drawablePadding="@dimen/_10sdp"
+                android:importantForAutofill="no"/>
+
+            <ImageView
+                android:id="@+id/btn_start_voice"
+                android:layout_width="@dimen/_23sdp"
+                android:layout_height="@dimen/_23sdp"
+                android:src="@drawable/ic_baseline_keyboard_voice_24"
+                android:background="?selectableItemBackgroundBorderless"
+                android:layout_marginEnd="@dimen/_5sdp"
+                app:tint="@color/black"
+                android:layout_gravity="center"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            app:layout_constraintTop_toBottomOf="@+id/start_container"
+            >
+            <EditText
+                android:id="@+id/etDestinationText"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/black"
+                android:focusableInTouchMode="true"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_12sdp"
+                android:hint="Destination Address"
+                android:drawableStart="@drawable/ic_baseline_location_on_24"
+                android:drawablePadding="@dimen/_10sdp"
+                android:importantForAutofill="no"
+                />
+
+            <ImageView
+                android:id="@+id/btn_destination_voice"
+                android:layout_width="@dimen/_23sdp"
+                android:layout_height="@dimen/_23sdp"
+                android:src="@drawable/ic_baseline_keyboard_voice_24"
+                android:background="?selectableItemBackgroundBorderless"
+                android:layout_marginEnd="@dimen/_5sdp"
+                app:tint="@color/black"
+                android:layout_gravity="center"
+                />
+        </LinearLayout>
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/btn_start_nav"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="wrap_content"
+            android:text="Start"
+            android:gravity="center"
+            android:textColor="@color/white"
+            app:iconTint="@color/white"
+            android:layout_marginBottom="@dimen/_20sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
